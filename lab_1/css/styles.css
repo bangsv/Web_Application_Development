@@ -1,0 +1,200 @@
+/* Общие стили для всего сайта */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 100;
+    overflow: hidden;
+
+}
+
+header {
+    background-color: rgba(248, 249, 250, 0.8);
+    /* f8f9fa с 80% непрозрачности */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 150px;
+    background: #f8f9fa;
+    padding: 10px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /* Закрепить на верху */
+    left: 0;
+    /* Прижать к левому краю */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20%;
+    /* Убираем отступы у ul */
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    /* Увеличиваем размер шрифта для лучшей видимости */
+    display: block;
+    /* Делаем ссылку блочным элементом */
+    padding: 5px;
+    /* Добавляем внутренний отступ */
+    transition: background 0.3s;
+    /* Добавляем эффект при наведении */
+}
+
+nav ul li a:hover {
+    background: #e0e0e0;
+    /* Цвет фона при наведении */
+}
+
+main {
+    margin-left: 200px;
+    /* Учитываем ширину боковой панели */
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 70px;
+    /* Учитываем высоту заголовка */
+}
+
+.logo img {
+    height: 55px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+#search_conten {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#search_conten:focus {
+    border-color: #3ea6ff;
+    box-shadow: 0 0 8px rgba(62, 166, 255, 0.5);
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-form button:hover {
+    background-color: #2e96df;
+}
+
+.right_icons {
+    display: flex;
+    gap: 20px;
+}
+
+.right_icons img {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.right_icons img:hover {
+    opacity: 0.7;
+}
+
+/* Стили для прокручиваемого контейнера с видео */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 120px);
+    /* Adjust based on header and footer height */
+    height: 100%;
+}
+
+/* Стили для контейнера с видео */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Для iframe, чтобы сохранить пропорции */
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+/* Стили для деталей видео */
+.video-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.channel-icon {
+    border-radius: 50%;
+}
+
+.details-text h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.details-text p {
+    margin: 5px 0 0 0;
+    color: #666;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}

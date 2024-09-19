@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <a href="content.html"><img src="images/youbube.png" alt="Логотип" width="170" height="70"></a>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <div class="auth-container">
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'login')">Вход</button>
+                <div class="divider"></div>
+                <button class="tab-button" onclick="openTab(event, 'register')">Регистрация</button>
+            </div>
+
+            <div id="login" class="tab-content active">
+                <h2>Вход</h2>
+                <form action="login.php" method="POST">
+                    <input type="text" name="username" placeholder="Логин" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button type="submit" class="transparent-button">Войти</button>
+                </form>
+            </div>
+
+            <div id="register" class="tab-content">
+                <h2>Регистрация</h2>
+                <form action="register.php" method="POST">
+                    <input type="text" name="username" placeholder="Логин" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <input type="password" name="confirm_password" placeholder="Подтверждение пароля" required>
+                    <button type="submit" class="transparent-button">Регистрация</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2024 Видеохостинг</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

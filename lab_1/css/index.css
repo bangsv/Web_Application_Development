@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Стили для header */
+header {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Иконка дальше от левой стороны */
+header img {
+  margin-left: 400px;
+}
+
+/* Стили для body */
+main {
+  background-color: red;
+  height: calc(100vh - 80px);
+  /* Убираем высоту header и footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 650px;
+  height: 650px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  /* Добавили отступ внутри круга */
+}
+
+.circle p {
+  font-size: 20px;
+}
+
+.transparent-button {
+  display: inline-block;
+  /* Чтобы ссылка велась как кнопка */
+  padding: 10px 40px;
+  border: 2px solid red;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  /* Цвет текста ссылки */
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.transparent-button:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+  /* Эффект при наведении */
+  color: black;
+  /* Цвет текста при наведении */
+}
+
+/* Стили для footer */
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  height: 40px;
+}
